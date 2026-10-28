@@ -1,47 +1,44 @@
 # SmartRoute — Intelligent Multi-Criteria City Route Planner
 
-A console-based C mini-project that models a city as a graph and compares routes using common graph traversal and shortest-path algorithms.
+A console-based C data-structures mini-project that models a city road network and helps compare routes using different criteria.
 
 ## Features
 
-- City-road graph using adjacency lists
+- Represent locations and roads as a graph using adjacency lists
 - Breadth-First Search (BFS) and Depth-First Search (DFS)
-- Dijkstra's shortest-path algorithm with a min-heap
-- Route planning strategies for distance, time, cost, and balanced criteria
-- Traffic and road-closure simulation
-- Route comparison and explanation
-- JSON export of the most recent route to `route.json`
+- Dijkstra-based shortest-route search using a min-heap
+- Route strategies for distance, time, cost, and a balanced score
+- Simulate traffic conditions and road closures
+- Compare route options and explain the selected route
+- Export the latest route to `route.json`
 
 ## Requirements
 
-- A C compiler such as GCC
-- A terminal or command prompt
+A C compiler such as GCC.
 
 ## Compile
 
-On Linux/macOS or in an environment with GCC:
-
 ```bash
-gcc smartroute.c -o smartroute -lm
+gcc -std=c11 -Wall -Wextra smartroute.c -o smartroute
 ```
 
 ## Run
 
-Linux/macOS:
+On Linux/macOS or a terminal with GCC:
 
 ```bash
 ./smartroute
 ```
 
-Windows (MinGW GCC):
+On Windows, run the compiled executable:
 
-```bash
-gcc smartroute.c -o smartroute.exe -lm
+```text
 smartroute.exe
 ```
 
-Follow the menu shown by the program. Use the route-planning option before choosing JSON export, since export saves the latest calculated route.
+Follow the on-screen menu to explore the sample city network and route-planning options. The program can export a JSON file after a route has been calculated.
 
-## Project purpose
+## Project file
 
-This project demonstrates graph representation, traversal, shortest-path search, priority queues, and multi-criteria route selection in C.
+- `smartroute.c` — complete C source code
+
